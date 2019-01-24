@@ -1,0 +1,45 @@
+﻿@Scripts.Render("~/Scripts/books/index.js")
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @using (Html.BeginForm())
+    {
+    <p>
+        Title: @Html.TextBox("SearchString") <br />
+        <input type="button" id="searchButton" value="Search"  />
+    </p>
+}
+    </p>
+ 
+
+
+    <table class="table" id="booktable">
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Publisher
+            </th>
+            <th>
+                PublishTime
+            </th>
+            <th>
+                Price
+            </th>
+            <th></th>
+        </tr>
+    </table>
